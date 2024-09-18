@@ -1,0 +1,21 @@
+{
+    "ClassName": "Person",
+    "Properties": [
+      {
+        "Name": "FirstName",
+        "Type": "string"
+      },
+      {
+        "Name": "LastName",
+        "Type": "string"
+      },
+      {
+        "Name": "Age",
+        "Type": "int"
+      },
+      {
+        "Name": "DateOfBirth",
+        "Type": "Datetime"
+      }
+    ]
+  }
