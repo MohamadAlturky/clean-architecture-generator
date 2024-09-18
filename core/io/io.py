@@ -27,3 +27,9 @@ def read_json_files_in_folder(folder_path):
                 print(f"Error reading {filename}: {str(e)}")
 
     return json_contents
+
+
+
+def write_to_file(file_name, content, mode='w'):
+    with open(file_name, mode) as file:
+        file.write(content)
