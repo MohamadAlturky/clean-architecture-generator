@@ -15,6 +15,7 @@ from core.build.mappers import build_mapper
 from core.io.io import read_json_files_in_folder,write_to_file
 from core.build.dto import build_dto, build_request
 from core.build.repository import build_repository
+from core.build.filter import build_filter_class
 folder_path = "./spec"
 json_files = read_json_files_in_folder(folder_path)
 
@@ -30,5 +31,6 @@ for content in json_files:
     # print("--------")
     class_name = content["ClassName"]
     write_to_file(f"./dist/{class_name}.cs",build_repository(content))
+    write_to_file(f"./dist/{class_name}Filter.cs",build_filter_class(class_name,content["Properties"]))
     
     
